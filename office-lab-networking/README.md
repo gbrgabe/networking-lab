@@ -2,8 +2,7 @@
 
 Real network configurations implemented on top of the sysadmin-lab environment.
 
-This section documents the evolution from a basic static IP setup to a more complete network infrastructure, the same way it would grow in a real small corporate environment.
-
+On this section I'll document the evolution from a basic static IP setup to a more complete network infrastructure, simulating how it would grow in a real small corporate environment.
 ---
 
 ## 01 - DHCP
