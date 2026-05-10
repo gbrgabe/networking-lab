@@ -2,7 +2,8 @@
 
 Real network configurations implemented on top of the sysadmin-lab environment.
 
-On this section I'll document the evolution from a basic static IP setup to a more complete network infrastructure, simulating how it would grow in a real small corporate environment.
+This section documents the evolution from a basic static IP setup to a more complete network infrastructure, simulating how it would grow in a real small corporate environment.
+
 ---
 
 ## 01 - DHCP
@@ -168,6 +169,8 @@ sudo systemctl stop systemd-resolved
 sudo rm /etc/resolv.conf
 echo "nameserver 10.0.0.1" | sudo tee /etc/resolv.conf
 ```
+
+> 📝 Note: I assumed that since DHCP was assigning IPs automatically, DNS would also be configured automatically. It doesn't work that way on Linux. DHCP and DNS are separate services and DNS needs to be set explicitly, especially on Ubuntu where systemd-resolved intercepts queries by default.
 
 ### Confirm on DC01
 
